@@ -28,14 +28,13 @@
 	<detail>
 		<band height="20">
 			<printWhenExpression><![CDATA[$F{observaciones} != null]]></printWhenExpression>
-			<staticText>
-				<reportElement style="Cabeceras" mode="Opaque" x="0" y="0" width="555" height="15" isRemoveLineWhenBlank="true" uuid="b2557855-6c3f-4d20-8368-5782087efa83"/>
-				<textElement textAlignment="Left">
+			<textField>
+				<reportElement style="Cabeceras" mode="Opaque" x="0" y="0" width="555" height="15" isRemoveLineWhenBlank="true" uuid="73a94c58-4428-470d-88b4-480e964e67db"/>
+				<textElement textAlignment="Left" markup="none">
 					<font fontName="Arial" size="8" isBold="true"/>
-					<paragraph leftIndent="5"/>
 				</textElement>
-				<text><![CDATA[AVISO]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$R{i18n.aviso}]]></textFieldExpression>
+			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement style="Recuadros" x="0" y="14" width="555" height="5" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="ec157cdd-abb2-41b1-b9b9-f9a9357f2e9f"/>
 				<textElement markup="styled">
